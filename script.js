@@ -4,16 +4,16 @@
 
 const CONFIG = {
     // Get this from Google Cloud Console (instructions in README.md)
-    googleCalendarApiKey: 'YOUR_GOOGLE_API_KEY_HERE',
+    googleCalendarApiKey: 'AIzaSyDcKbTL-NU98ZrMbcoFriaVtuBQu05-rIg',
     
     // Your Google Calendar ID (usually your gmail address)
     // To find it: Go to Google Calendar → Settings → Your calendar → Calendar ID
-    googleCalendarId: 'YOUR_CALENDAR_ID_HERE',
+    googleCalendarId: '5af0bd97b7a10464863890ad9d5e39b02291d7dfc0f5b16154e773cefd3fa658@group.calendar.google.com',
     
     // EmailJS credentials (instructions in README.md)
-    emailjsPublicKey: 'YOUR_EMAILJS_PUBLIC_KEY',
-    emailjsServiceId: 'YOUR_EMAILJS_SERVICE_ID',
-    emailjsTemplateId: 'YOUR_EMAILJS_TEMPLATE_ID'
+    emailjsPublicKey: 'pCvte7tIHbWL2CfAJ',
+    emailjsServiceId: 'service_w9sxh6e',
+    emailjsTemplateId: 'template_7t2j30p'
 };
 
 // ============================================
