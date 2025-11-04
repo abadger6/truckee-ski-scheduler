@@ -16,28 +16,80 @@ body {
     overflow-x: hidden;
 }
 
-/* Animated Snowflakes Background */
-body::before {
-    content: '❅';
+/* Animated Snowflakes Background - More snowflakes! */
+.snowflake-bg {
     position: fixed;
     top: -10%;
-    left: 10%;
-    font-size: 2em;
-    color: rgba(255, 255, 255, 0.6);
-    animation: snowfall 15s linear infinite;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5em;
+    animation: snowfall 12s linear infinite;
+    pointer-events: none;
     z-index: 0;
 }
 
-body::after {
-    content: '❆';
-    position: fixed;
-    top: -10%;
-    right: 20%;
-    font-size: 3em;
-    color: rgba(255, 255, 255, 0.4);
-    animation: snowfall 20s linear infinite;
+.snowflake-bg:nth-child(1) {
+    left: 5%;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+
+.snowflake-bg:nth-child(2) {
+    left: 15%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+    font-size: 2em;
+}
+
+.snowflake-bg:nth-child(3) {
+    left: 25%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+
+.snowflake-bg:nth-child(4) {
+    left: 35%;
+    animation-duration: 20s;
+    animation-delay: 1s;
+    font-size: 2.5em;
+}
+
+.snowflake-bg:nth-child(5) {
+    left: 45%;
+    animation-duration: 16s;
+    animation-delay: 6s;
+}
+
+.snowflake-bg:nth-child(6) {
+    left: 55%;
+    animation-duration: 14s;
     animation-delay: 3s;
-    z-index: 0;
+    font-size: 1.8em;
+}
+
+.snowflake-bg:nth-child(7) {
+    left: 65%;
+    animation-duration: 19s;
+    animation-delay: 5s;
+}
+
+.snowflake-bg:nth-child(8) {
+    left: 75%;
+    animation-duration: 17s;
+    animation-delay: 2s;
+    font-size: 2.2em;
+}
+
+.snowflake-bg:nth-child(9) {
+    left: 85%;
+    animation-duration: 15s;
+    animation-delay: 7s;
+}
+
+.snowflake-bg:nth-child(10) {
+    left: 95%;
+    animation-duration: 21s;
+    animation-delay: 4s;
+    font-size: 1.6em;
 }
 
 @keyframes snowfall {
