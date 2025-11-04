@@ -8,7 +8,7 @@ const CONFIG = {
     
     // Your Google Calendar ID (usually your gmail address)
     // To find it: Go to Google Calendar → Settings → Your calendar → Calendar ID
-    googleCalendarId: 'https://calendar.google.com/calendar/embed?src=5af0bd97b7a10464863890ad9d5e39b02291d7dfc0f5b16154e773cefd3fa658%40group.calendar.google.com&ctz=America%2FLos_Angeles',
+    googleCalendarId: '5af0bd97b7a10464863890ad9d5e39b02291d7dfc0f5b16154e773cefd3fa658@group.calendar.google.com',
     
     // EmailJS credentials (instructions in README.md)
     emailjsPublicKey: 'pCvte7tIHbWL2CfAJ',
