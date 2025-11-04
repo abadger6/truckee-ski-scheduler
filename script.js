@@ -4,16 +4,16 @@
 
 const CONFIG = {
     // Get this from Google Cloud Console (instructions in README.md)
-    googleCalendarApiKey: 'AIzaSyDcKbTL-NU98ZrMbcoFriaVtuBQu05-rIg',
+    googleCalendarApiKey: 'YOUR_GOOGLE_API_KEY_HERE',
     
     // Your Google Calendar ID (usually your gmail address)
     // To find it: Go to Google Calendar → Settings → Your calendar → Calendar ID
-    googleCalendarId: '5af0bd97b7a10464863890ad9d5e39b02291d7dfc0f5b16154e773cefd3fa658@group.calendar.google.com',
+    googleCalendarId: 'YOUR_CALENDAR_ID_HERE',
     
     // EmailJS credentials (instructions in README.md)
-    emailjsPublicKey: 'pCvte7tIHbWL2CfAJ',
-    emailjsServiceId: 'service_w9sxh6e',
-    emailjsTemplateId: 'template_7t2j30p'
+    emailjsPublicKey: 'YOUR_EMAILJS_PUBLIC_KEY',
+    emailjsServiceId: 'YOUR_EMAILJS_SERVICE_ID',
+    emailjsTemplateId: 'YOUR_EMAILJS_TEMPLATE_ID'
 };
 
 // ============================================
@@ -177,7 +177,8 @@ async function handleFormSubmit(e) {
     
     try {
         await sendBookingRequest(formData);
-        showStatus('success', '🎉 Request sent! I\'ll get back to you soon via email.');
+        // Show Sloane modal instead of inline message
+        showSloaneModal();
         e.target.reset();
     } catch (error) {
         console.error('Error sending request:', error);
@@ -231,3 +232,26 @@ function showStatus(type, message) {
         }, 5000);
     }
 }
+
+// ============================================
+// SLOANE MODAL
+// ============================================
+
+function showSloaneModal() {
+    const modal = document.getElementById('sloaneModal');
+    modal.style.display = 'block';
+    
+    // Close when clicking the X
+    const closeBtn = modal.querySelector('.close-btn');
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    };
+    
+    // Close when clicking outside the modal
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
+

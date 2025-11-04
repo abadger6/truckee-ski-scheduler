@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visit Scheduler - Come Visit Us!</title>
+    <title>Visit Scheduler - Come Visit Me!</title>
     <link rel="stylesheet" href="styles.css">
     <!-- FullCalendar CSS -->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css' rel='stylesheet' />
@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>🏔️ Come Visit Meg, Alex, and Sloane in Truckee!</h1>
+            <h1>🏔️ Come Visit Truckee!</h1>
             <p class="subtitle">Check out available dates and request your visit</p>
         </header>
 
@@ -24,7 +24,7 @@
                     <span class="legend-item"><span class="dot booked"></span> Booked</span>
                 </p>
                 <div id="calendar"></div>
-                <p class="calendar-note">Calendar syncs with our Google Calendar - what you see is always up to date!</p>
+                <p class="calendar-note">Calendar syncs with my Google Calendar - what you see is always up to date!</p>
             </section>
 
             <!-- Booking Form Section -->
@@ -72,6 +72,26 @@
         <footer>
             <p>Questions? Just send me a text or email!</p>
         </footer>
+    </div>
+
+    <!-- Sloane Pop-up Modal -->
+    <div id="sloaneModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img src="Sloane.jpg" alt="Sloane the dog" class="sloane-image">
+                <h2>🎉 Request Sent!</h2>
+                <p class="sloane-message">Sloane can't wait to meet you!</p>
+                <p class="confirmation-text">We'll get back to you soon via email to confirm your dates.</p>
+                <div class="snowflakes" aria-hidden="true">
+                    <div class="snowflake">❅</div>
+                    <div class="snowflake">❆</div>
+                    <div class="snowflake">❅</div>
+                    <div class="snowflake">❆</div>
+                    <div class="snowflake">❅</div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- FullCalendar JS -->

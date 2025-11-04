@@ -7,26 +7,88 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #1e3a5f;
+    background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+    background-attachment: fixed;
     min-height: 100vh;
     padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated Snowflakes Background */
+body::before {
+    content: '❅';
+    position: fixed;
+    top: -10%;
+    left: 10%;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.6);
+    animation: snowfall 15s linear infinite;
+    z-index: 0;
+}
+
+body::after {
+    content: '❆';
+    position: fixed;
+    top: -10%;
+    right: 20%;
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.4);
+    animation: snowfall 20s linear infinite;
+    animation-delay: 3s;
+    z-index: 0;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.3;
+    }
 }
 
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(30, 58, 95, 0.3);
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #0ea5e9 100%);
     color: white;
     padding: 40px 30px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '⛷️';
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: 0.3;
+}
+
+header::after {
+    content: '🎿';
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: 0.3;
 }
 
 header h1 {
@@ -48,7 +110,7 @@ section {
 }
 
 h2 {
-    color: #667eea;
+    color: #1e3a5f;
     margin-bottom: 20px;
     font-size: 1.8em;
 }
@@ -124,7 +186,7 @@ textarea {
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #2563eb;
 }
 
 textarea {
@@ -141,7 +203,7 @@ textarea {
 .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -153,7 +215,7 @@ textarea {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
 }
 
 .submit-btn:active {
@@ -246,4 +308,160 @@ footer {
 .fc-event-available {
     background-color: #10b981 !important;
     border-color: #059669 !important;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 58, 95, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 20px;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #64748b;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #1e3a5f;
+}
+
+.modal-body {
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.sloane-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body h2 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.sloane-message {
+    font-size: 1.3em;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.confirmation-text {
+    color: #64748b;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Snowflakes in modal */
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2em;
+    animation: modalSnowfall 8s linear infinite;
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes modalSnowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(600px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% 20px;
+        max-width: 100%;
+    }
+    
+    .modal-body {
+        padding: 30px 20px;
+    }
+    
+    .sloane-image {
+        max-width: 100%;
+    }
 }
