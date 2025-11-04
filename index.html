@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Scheduler - Come Visit Me!</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏔️ Come Visit Truckee!</h1>
+            <p class="subtitle">Check out available dates and request your visit</p>
+        </header>
+
+        <main>
+            <!-- Calendar Section -->
+            <section class="calendar-section">
+                <h2>Available Dates</h2>
+                <p class="calendar-info">
+                    <span class="legend-item"><span class="dot available"></span> Available</span>
+                    <span class="legend-item"><span class="dot booked"></span> Booked</span>
+                </p>
+                <div id="calendar"></div>
+                <p class="calendar-note">Calendar syncs with my Google Calendar - what you see is always up to date!</p>
+            </section>
+
+            <!-- Booking Form Section -->
+            <section class="form-section">
+                <h2>Request a Visit</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkin">Check-in Date *</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout">Check-out Date *</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <input type="number" id="guests" name="guests" min="1" max="10" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any special requests or things I should know?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Request Visit</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Questions? Just send me a text or email!</p>
+        </footer>
+    </div>
+
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Our custom script -->
+    <script src="script.js"></script>
+</body>
+</html>
