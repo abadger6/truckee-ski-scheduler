@@ -1,6 +1,3 @@
-# truckee-ski-scheduler
-Website for our friends to view our calendar and schedule time to visit!
-
 # Visit Scheduler - Come Visit Me! 🏔️
 
 A simple, free booking interface for friends to schedule visits. Uses GitHub Pages (free hosting), Google Calendar (backend), and EmailJS (notifications).
