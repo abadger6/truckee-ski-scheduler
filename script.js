@@ -4,7 +4,7 @@
 
 const CONFIG = {
     // Get this from Google Cloud Console (instructions in README.md)
-    googleCalendarApiKey: '755115471791-kunq4ualt7dtfigcg55q6nq228jj0amg.apps.googleusercontent.com',
+    googleCalendarApiKey: 'AIzaSyDcKbTL-NU98ZrMbcoFriaVtuBQu05-rIg',
     
     // Your Google Calendar ID (usually your gmail address)
     // To find it: Go to Google Calendar → Settings → Your calendar → Calendar ID
